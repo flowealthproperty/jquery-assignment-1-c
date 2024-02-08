@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#check1').change(function() {
+        var checkedAttr = $(this).attr('checked');
+        var checkedProp = $(this).prop('checked');
+        $('#result').text('checked attribute: ' + checkedAttr + ', checked property: ' + checkedProp);
+      });
+    });
+  </script>
+</head>
+<body style=" align-items: center; display: flex;justify-content: center; padding: 50px;">
+ <div style="padding: 30px; border: 1px solid #000; width: 100px; display: block;">
+    <input id="check1" type="checkbox" checked="checked">
+    <label for="check1">Check me</label>
+ </div>
+  <div style="display: block; align-items: center; justify-content: center; text-align: center;">
+    <p id="result" style="font-weight: bold;"></p>
+  </div>
+</body>
+</html>
